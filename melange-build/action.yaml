@@ -71,6 +71,11 @@ inputs:
       Directory used for cached inputs
     default: ''
 
+  token:
+    description: |
+      GitHub token
+    default: ''
+
 runs:
   using: 'composite'
 
