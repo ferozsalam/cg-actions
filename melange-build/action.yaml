@@ -89,8 +89,9 @@ runs:
       if: ${{ inputs.sign-with-temporary-key }}
       with:
         signing-key-path: ${{ inputs.signing-key-path }}
-    - uses: chainguard-dev/actions/melange-build-pkg@main
+    - uses: ferozsalam/cg-actions/melange-build-pkg@main
       with:
+        token: ${{ inputs.token }}
         config: ${{ inputs.config }}
         multi-config: ${{ inputs.multi-config }}
         archs: ${{ inputs.archs }}
