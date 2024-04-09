@@ -76,6 +76,11 @@ inputs:
       GitHub token
     default: ''
 
+  env-file:
+    description: |
+      Env file
+    default: ''
+
 runs:
   using: 'composite'
 
@@ -92,6 +97,7 @@ runs:
     - uses: ferozsalam/cg-actions/melange-build-pkg@main
       with:
         token: ${{ inputs.token }}
+        env-file: ${{ inputs.env-file }}
         config: ${{ inputs.config }}
         multi-config: ${{ inputs.multi-config }}
         archs: ${{ inputs.archs }}
