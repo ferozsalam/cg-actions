@@ -71,15 +71,15 @@ inputs:
       Directory used for cached inputs
     default: ''
 
-  token:
-    description: |
-      GitHub token
-    default: ''
-
   env-file:
     description: |
       Env file
     default: ''
+
+  out-dir:
+    description: |
+      Directory where packages will be output
+    default: './packages/'
 
 runs:
   using: 'composite'
@@ -110,3 +110,4 @@ runs:
         namespace: ${{ inputs.namespace }}
         workdir: ${{ inputs.workdir }}
         cache-dir: ${{ inputs.cache-dir }}
+        out-dir: ${{ inputs.out-dir }}
